@@ -646,7 +646,7 @@ Example:
 | Param                            | Description                                            |
 | -------------------------------- | ------------------------------------------------------ |
 | `token_id`                       | _ID for new token you are minting_                     |
-| `metadata`                       | _Metadata for the new token as a string._              |
+| `token_metadata`                 | _TokenMetadata for the new token as an object._        |
 | `account_id`                     | _Account ID for the new token owner._                  |
 | `seed_phrase` _OR_ `private_key` | _Seed phrase OR private key for the NFT contract._     |
 | `nft_contract`                   | _Account ID for the NFT contract your are minting on._ |
@@ -658,7 +658,7 @@ Example:
 ```
 {
     "token_id": "EXAMPLE-TOKEN",
-    "metadata": "https://ipfs.io/ipfs/Qme7ss3ARVgxv6rXqVPiikMJ8u2NLgmgszg13pYrDKEoiu",
+    "token_metadata": {"media":"https://ipfs.io/ipfs/Qme7ss3ARVgxv6rXqVPiikMJ8u2NLgmgszg13pYrDKEoiu"},
     "account_id": "example.testnet",
     "private_key": "41oHMLtYygTsgwDzaMdjWRq48Sy9xJsitJGmMxgA9A7nvd65aT8vQwAvRdHi1nruPP47B6pNhW5T5TK8SsqCZmjn",
     "contract": "nft.example.near",

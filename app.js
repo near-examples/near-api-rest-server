@@ -281,11 +281,11 @@ const init = async () => {
             for (let i = min; i <= max; i++) {
                 const tokenId = request.payload.token_id.replace('{inc}', i);
 
-                let {account_id, private_key, metadata, contract} = request.payload;
+                let {account_id, private_key, token_metadata, contract} = request.payload;
 
                 const tx = await token.MintNFT(
                     tokenId,
-                    metadata,
+                    token_metadata,
                     contract,
                     account_id,
                     private_key
