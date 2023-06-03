@@ -25,7 +25,7 @@ module.exports = {
     /**
      * @return {string}
      */
-    MintNFT: async function (tokenId, metadata, contractAccountId, account_id, private_key) {
+    MintNFT: async function (tokenId, tokenMetadata, contractAccountId, account_id, private_key) {
         const nftContract = contractAccountId ? contractAccountId : settings.nft_contract;
 
         let account = !(account_id && private_key)
@@ -38,7 +38,8 @@ module.exports = {
                 "nft_mint",
                 {
                     "token_id": tokenId,
-                    "metadata": metadata
+                    "token_metadata": tokenMetadata,
+                    "receiver_id": account_id
                 },
                 '100000000000000',
                 '10000000000000000000000');
